@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sestav si svoji fotovýbavu!"
+        android:layout_marginTop="16dp"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vyber si tělo fotoaparátu"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D780" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D3400" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D5600" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/obrazek"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Obrázek položky" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vyber si objektivy"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIKKOR 35mm f/1.8 AF-S DX" />
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nikon 10-20mm f/4.5-5.6 G AF-P DX VR" />
+
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7Artisans AF 50mm f/1,8" />
+
+    <Button
+        android:id="@+id/btnObjednat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Objednat"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewSouhrn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Souhrn objednávky"
+        android:textSize="18sp" />
+</LinearLayout>
