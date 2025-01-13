@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Nápis aplikace -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Změna barvy textu"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Popisek pro zadání textu -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zadejte text:"
+        android:paddingBottom="8dp" />
+
+    <!-- Textové pole pro zadání textu -->
+    <EditText
+        android:id="@+id/textovePole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zadejte text" />
+
+    <!-- Popisek pro výběr barvy -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vyberte barvu:"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Spinner pro výběr barvy -->
+    <Spinner
+        android:id="@+id/spinnerBarva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Tlačítko pro zobrazení textu -->
+    <Button
+        android:id="@+id/tlacitkoZobrazit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zobrazit text"
+        android:layout_marginTop="16dp" />
+
+    <!-- Váš text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vyberte barvu:"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- TextView pro zobrazení textu -->
+    <TextView
+        android:id="@+id/zobrazeniTextu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#6BD3C0F2" />
+</LinearLayout>
