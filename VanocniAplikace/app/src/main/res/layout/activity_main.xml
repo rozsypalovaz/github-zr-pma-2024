@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titulekAplikace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adventní kalendář vánočních filmů"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <GridLayout
+        android:id="@+id/gridAdventniKalendar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="6"
+        android:rowCount="4"
+        android:padding="8dp">
+
+        <!-- Tlačítka pro každý den kalendáře, celkem 24 -->
+        <!-- První řádek -->
+        <Button android:id="@+id/den1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="1" />
+        <Button android:id="@+id/den2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="2" />
+        <Button android:id="@+id/den3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="3" />
+        <Button android:id="@+id/den4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="4" />
+        <Button android:id="@+id/den5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="5" />
+        <Button android:id="@+id/den6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="6" />
+
+        <!-- Další řádky budou následovat stejný vzor -->
+        <!-- Uprav tlačítka podle potřeby až do 24 dní -->
+
+    </GridLayout>
+
+</LinearLayout>
