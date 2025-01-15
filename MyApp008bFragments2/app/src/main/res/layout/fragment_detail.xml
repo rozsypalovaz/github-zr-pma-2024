@@ -3,31 +3,38 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="20sp">
 
-    <TextView
+       <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:text="Title" />
+        android:text="Den v měsíci: " />
 
     <TextView
         android:id="@+id/textViewAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Author" />
+        android:text="Název filmu: " />
 
     <TextView
         android:id="@+id/textViewGenre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Genre" />
+        android:text="Žánr: " />
 
     <TextView
         android:id="@+id/textViewYear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Year" />
+        android:text="Rok vydání: " />
+
+    <ImageView
+        android:id="@+id/imageViewBook"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
 </LinearLayout>

@@ -4,20 +4,41 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20sp">
+    android:background="@color/white"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/nadpis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="Adventní kalendář vánočních filmů"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"/>
+
+
+    <TextView
+        android:id="@+id/shortText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="Existuje mnoho vánočních filmů. Abych vám ulehčila rozhodování - je tu můj adventní kalendář naprostých vánočních klasik!"
+        android:textSize="16sp"
+        android:paddingBottom="15dp"
+        android:textColor="@android:color/black"/>
 
     <!-- FrameLayout pro zobrazení seznamu (ListFragment) -->
     <FrameLayout
         android:id="@+id/fragment_container_list"
         android:layout_width="match_parent"
-        android:background="#FFCCCB"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 
     <!-- FrameLayout pro zobrazení detailů (DetailFragment) -->
     <FrameLayout
         android:id="@+id/fragment_container_detail"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 </LinearLayout>
