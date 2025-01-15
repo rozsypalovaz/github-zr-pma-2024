@@ -6,15 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ListView
+import android.widget.GridView
 
 class ListFragment : Fragment() {
 
-    private lateinit var listView: ListView
+    private lateinit var gridView: GridView
+
+    // Definujeme data class pro knihu
+    data class Book(val title: String, val author: String, val genre: String, val year: Int)
+
+    // Seznam knih
     private val books = listOf(
-        "Book 1" to "Author 1",
-        "Book 2" to "Author 2",
-        "Book 3" to "Author 3"
+        Book("Book 1", "Author 1", "Genre 1", 2021),
+        Book("Book 2", "Author 2", "Genre 2", 2020),
+        Book("Book 3", "Author 3", "Genre 3", 2019),
+        // Přidejte další knihy až do celkového počtu 24
+        // ...
     )
 
     override fun onCreateView(
@@ -22,19 +29,24 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
-        listView = view.findViewById(R.id.listViewBooks)
+        gridView = view.findViewById(R.id.gridViewBooks)
 
         val adapter = ArrayAdapter(
             requireContext(),
             android.R.layout.simple_list_item_1,
-            books.map { it.first }
+            books.map { it.title }
         )
-        listView.adapter = adapter
+        gridView.adapter = adapter
 
-        // Při kliknutí na položku zavoláme metodu aktivity
-        listView.setOnItemClickListener { _, _, position, _ ->
+        // Při kliknutí na položku zavoláme metodu aktivity s více argumenty
+        gridView.setOnItemClickListener { _, _, position, _ ->
             val selectedBook = books[position]
-            (activity as? MainActivity)?.onBookSelected(selectedBook.first, selectedBook.second)
+            (activity as? MainActivity)?.onBookSelected(
+                selectedBook.title,
+                selectedBook.author,
+                selectedBook.genre,
+                selectedBook.year.toString()
+            )
         }
         return view
     }

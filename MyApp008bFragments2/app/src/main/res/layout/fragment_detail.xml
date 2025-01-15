@@ -20,9 +20,14 @@
         android:text="Author" />
 
     <TextView
-        android:id="@+id/textViewDescription"
+        android:id="@+id/textViewGenre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Description" />
+        android:text="Genre" />
 
+    <TextView
+        android:id="@+id/textViewYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Year" />
 </LinearLayout>

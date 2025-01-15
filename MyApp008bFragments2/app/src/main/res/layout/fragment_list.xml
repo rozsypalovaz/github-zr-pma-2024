@@ -6,8 +6,12 @@
     android:orientation="vertical"
     android:padding="20sp">
 
-    <ListView
-        android:id="@+id/listViewBooks"
+    <GridView
+        android:id="@+id/gridViewBooks"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:numColumns="5"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth" />
 </LinearLayout>
