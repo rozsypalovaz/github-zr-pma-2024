@@ -16,6 +16,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //SharedPreferences pro uchování informací zadaných uživatelem, jako je jméno,
+        // věk a stav dospělosti (dle zaškrtávacího pole).
+
+        //Když uživatel zadá své údaje a stiskne tlačítko "Uložit",
+        // data se uloží do SharedPreferences. Tím se zajistí, že tyto údaje budou dostupné
+        // i po zavření a opětovném otevření aplikace
+
 
         // Inicializace bindingu
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -25,13 +32,12 @@ class MainActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
 
-        // Funkcionalita pro uložení dat
         binding.btnSave.setOnClickListener {
             val name = binding.etName.text.toString()
             val ageString = binding.etAge.text.toString().trim()
 
             if (ageString.isBlank()) {
-                Toast.makeText(this, "Hele, vyplň věk...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Vyplň věk...", Toast.LENGTH_SHORT).show()
             } else {
                 val age = ageString.toInt()
                 val isAdult = binding.cbAdult.isChecked
