@@ -7,25 +7,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnShowToast"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:text="Zobrazit TOAST"
+        android:hint="Jméno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btnShowSnackbar"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Zobrazit SNACKBAR"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="Věk"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowToast"
-        app:layout_constraintVertical_bias="0.353" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        android:layout_margin="16dp"
+        android:inputType="number" />
 
+    <EditText
+        android:id="@+id/editTextYearsLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Zbývající roky studia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAge"
+        android:layout_margin="16dp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spočítat rok dostudování"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextYearsLeft"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+        android:layout_marginTop="16dp"
+        android:text="Výsledek"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
