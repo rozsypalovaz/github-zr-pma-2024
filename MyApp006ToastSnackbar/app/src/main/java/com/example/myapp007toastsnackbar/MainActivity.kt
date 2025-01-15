@@ -1,8 +1,10 @@
 package com.example.myapp007toastsnackbar
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.myapp007toastsnackbar.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -16,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Nastavení Toolbaru
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Kdy mi končí studium?"
+
         binding.btnCalculate.setOnClickListener {
             calculateGraduationYear()
         }
@@ -27,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val yearsLeftStr = binding.editTextYearsLeft.text.toString()
 
         if (name.isEmpty() || ageStr.isEmpty() || yearsLeftStr.isEmpty()) {
-            Toast.makeText(this, "Prosím vyplňte všechny údaje.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Prosím vyplň všechny údaje.", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -43,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         if (ageAtGraduation >= 26) {
             Snackbar.make(binding.root, "Ohlídej si platbu zdravotního a sociálního pojištění.", Snackbar.LENGTH_LONG)
+                .setBackgroundTint(Color.parseColor("#FF35AA"))
                 .setAction("OK") { }
                 .show()
         }
