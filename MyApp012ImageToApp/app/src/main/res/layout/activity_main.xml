@@ -8,7 +8,6 @@
     tools:context=".MainActivity"
     android:padding="20dp">
 
-
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="250dp"
@@ -31,5 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivImage" />
 
+    <Button
+        android:id="@+id/btnBlackWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Změnit na černobílý"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTakeImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
