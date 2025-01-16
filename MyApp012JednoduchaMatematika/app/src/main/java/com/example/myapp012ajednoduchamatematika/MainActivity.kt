@@ -16,6 +16,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
+    //TextView a Button prvků pro zobrazení času, otázky, skóre
     var TimeTextView: TextView? = null
     var QuestionTextText: TextView? = null
     var ScoreTextView: TextView? = null
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     var btn2: Button? = null
     var btn3: Button? = null
     var countDownTimer: CountDownTimer? = null
-    var random: Random = Random
+    var random: Random = Random //generátor náhodných čísel
     var a = 0
     var b = 0
     var indexOfCorrectAnswer = 0
@@ -52,7 +53,8 @@ class MainActivity : AppCompatActivity() {
         btn2 = findViewById(R.id.button2)
         btn3 = findViewById(R.id.button3)
 
-        start()
+
+        start() //inicializuje první otázku a odpočítávání
 
     }
 
@@ -111,6 +113,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Zpracovává výběr odpovědi uživatelem. Aktualizuje počet bodů a celkový počet otázek.
+    // Generuje novou otázku.
+
     fun optionSelect(view: View?) {
         totalQuestions++
         if (indexOfCorrectAnswer.toString() == view!!.tag.toString()) {
@@ -131,7 +136,7 @@ class MainActivity : AppCompatActivity() {
         countDownTimer!!.start()
     }
 
-    private fun start() {
+    private fun start() { //Generuje první otázku a spustí časovač.
         NextQuestion(cals)
         countDownTimer = object : CountDownTimer(10000, 500) {
             override fun onTick(p0: Long) {
