@@ -9,7 +9,7 @@ import com.example.myapp014amynotehub.databinding.ItemNoteBinding
 import kotlinx.coroutines.launch
 
 class NoteAdapter(
-    private val notes: List<Note>,
+    private val notes: List<Note>, //Seznam poznámek, které budou zobrazeny.
     private val onDeleteClick: (Note) -> Unit,  // Funkce pro mazání poznámky
     private val onEditClick: (Note) -> Unit,    // Funkce pro editaci poznámky
     private val lifecycleScope: LifecycleCoroutineScope,  // Přidán lifecycleScope
