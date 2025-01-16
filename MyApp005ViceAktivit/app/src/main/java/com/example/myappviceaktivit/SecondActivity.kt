@@ -7,13 +7,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.myappviceaktivit.R
+import com.example.myapp006moreactivities.R
 
 class SecondActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContentView(R.layout.activity_second)
+
+        //přijímá data z předchozí aktivity, zobrazuje je a umožňuje návrat zpět do předchozí aktivity
 
         val twInfo = findViewById<TextView>(R.id.twInfo)
 
