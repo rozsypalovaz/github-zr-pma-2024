@@ -12,8 +12,8 @@ class TaskAdapter(
 
     inner class TaskViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(task: Task) {
-            binding.tvTaskName.text = task.name
-            binding.cbTaskCompleted.isChecked = task.isCompleted
+            binding.tvTaskName.text = task.name // Nastavení názvu úkolu
+            binding.cbTaskCompleted.isChecked = task.isCompleted // Nastavení stavu checkboxu dle stavu úkolu
             binding.tvAssignedTo.text = if (task.assignedTo.isNotEmpty()) {
                 "Assigned to: ${task.assignedTo}"
             } else {
@@ -21,8 +21,8 @@ class TaskAdapter(
             }
 
             binding.cbTaskCompleted.setOnCheckedChangeListener { _, isChecked ->
-                task.isCompleted = isChecked
-                onTaskChecked(task)
+                task.isCompleted = isChecked // Aktualizace stavu úkolu podle stavu checkboxu
+                onTaskChecked(task)  // Vyvolání callback funkce pro změnu stavu úkolu
             }
 
             // Logika pro zarezervování úkolu
@@ -36,14 +36,17 @@ class TaskAdapter(
         }
     }
 
+    //Inflatuje layout pro jednotlivé položky v seznamu (Inflatovat = vytvořit instance View elementů (jako jsou tlačítka, textová pole atd.) z XML souboru layoutu
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val binding = ItemTaskBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return TaskViewHolder(binding)
     }
 
+    //Připojuje data (úkol) k ViewHolderu na konkrétní pozici
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         holder.bind(tasks[position])
     }
 
+    //Vrací počet položek (úkolů) v seznamu.
     override fun getItemCount(): Int = tasks.size
 }

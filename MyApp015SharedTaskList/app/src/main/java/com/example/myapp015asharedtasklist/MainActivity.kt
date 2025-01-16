@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         println("Task updated: ${task.name}, completed: ${task.isCompleted}")
     }
 
-    private fun showAddTaskDialog() {
+    private fun showAddTaskDialog() { //Zobrazuje dialogové okno pro přidání nového úkolu
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Add Task")
 
@@ -143,12 +143,12 @@ class MainActivity : AppCompatActivity() {
                 return@addSnapshotListener
             }
 
-            tasks.clear()
+            tasks.clear() // Vyčištění lokálního seznamu úkolů
             for (document in snapshots!!) {
                 val task = document.toObject(Task::class.java)
                 tasks.add(task)
             }
-            taskAdapter.notifyDataSetChanged()
+            taskAdapter.notifyDataSetChanged() // Oznámení adaptéru o změně dat
         }
     }
 
